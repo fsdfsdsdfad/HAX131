@@ -20,7 +20,7 @@ print("using device:", device)
 import open_clip
 
 model, _, preprocess = open_clip.create_model_and_transforms('ViT-B-32-quickgelu', pretrained='laion400m_e32', device=device)
-tokenizer = open_clip.get_tokenizer('ViT-B-32-quickgelu')
+tokenizer = open_clip.tokenizer('ViT-B-32-quickgelu')
 
 
 print("inferencing hcaptcha classes")
