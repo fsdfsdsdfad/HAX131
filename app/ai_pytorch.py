@@ -38,7 +38,6 @@ classes_text = {
     "an otter in wаtеr": "an otter in water",
     "a panda on a couch": "a panda on a couch",
     "a violin": "a violin",
-    "a drum": "a drum",
     "a piano": "a piano",
     "a console cοntroller": "a console cοntroller",
     "a smartphone": "a smartphone",
@@ -50,17 +49,32 @@ classes_text = {
     "a bird": "a bird",
     "a stork": "a stork",
     "a watch": "a watch",
-    "an earing" : "an earing",
-    "a turtle" : " a turtle",
-    "a chair" : " a chair",
-    "a timber door" : "a timber door",
-    "a wardrobe" : "a wardrobe",
-    "a pencil": " a pencil",
+    "an earing": "an earing",
+    "a turtle": "a turtle",
+    "a timber door": "a timber door",
+    "a wardrobe": "a wardrobe",
+    "a pencil": "a pencil",
     "a bed": "a bed",
     "a motorcycle": "a motorcycle",
     "a table": "a table",
-
+    "a river": "a river",
+    "a helicopter": "a helicopter",
+    "a flower": "a flower",
+    "a chess table": "a chess table",
+    "a microwave": "a microwave",
+    "a nintendo switch": "a nintendo switch",
+    "a bag": "a bag",
+    "a tent": "a tent",
+    "a keyboard": "a keyboard",
+    "a mouse": "a mouse",
+    "a truck": "a truck",
+    "a crumpled paper ball": "a crumpled paper ball",
+    "a tractor": "a tractor",
+    "a robot": "a robot",
+    "a bus": "a bus",
+    "a car": "a car"
 }
+
 text_classes = []
 for c in classes_text.values():
     text_classes.append(c)
@@ -124,6 +138,7 @@ def predict(text, imgs_map):
         index = np.argmax(similarity)
 
         # print highest class probability & image uid
+        #print(list(raw_images.keys())[i])
         print(text_classes[index], list(raw_images.keys())[i])
         if text_classes[index] == text:
             results.append(True)
