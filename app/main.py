@@ -1,5 +1,7 @@
 
 
+
+
 from concurrent import futures
 import logging
 import ai_pytorch as ai
@@ -39,7 +41,8 @@ import json
 @app.route('/solve', methods = ['POST', 'GET'])
 async def solve():
     data = request.json
-
+    new_keys = {int(k): v for k, v in data["images_map"].items()}
+    data["images_map"] = new_keys
 
     # while len(data["images_map"]) < 9:
         # data["images_map"].append(data["images_map"][0])
@@ -49,8 +52,14 @@ async def solve():
     # return as json
 
     response = {
-        "scores": predictions
-    }
+  "errorId": 0,
+  "errorCode": "",
+  "status": "ready",
+  "solution": {
+    "objects": predictions,
+  },
+  "taskId": "5aa8be0c-94a5-11ec-80d7-00163f00a53c"
+}
 
     return app.response_class(
         response=json.dumps(response),
@@ -61,6 +70,10 @@ async def solve():
 
 
 if __name__ == '__main__':
- app.run(host='0.0.0.0', port=8887)
+ app.run(host='0.0.0.0', port=8082)
+
+
+
+
 
 
