@@ -49,7 +49,7 @@ classes_text = {
     "a bird": "a bird",
     "a stork": "a stork",
     "a watch": "a watch",
-    "an earing": "an earing",
+    "an earing": "an earring",
     "a turtle": "a turtle",
     "a timber door": "a timber door",
     "a wardrobe": "a wardrobe",
@@ -72,8 +72,15 @@ classes_text = {
     "a tractor": "a tractor",
     "a robot": "a robot",
     "a bus": "a bus",
-    "a car": "a car"
+    "a car": "a car",
+    "a pair of headphones": "a pair of headphones",
+    "a chicken": "a chicken",
+    "a mountain": "a mountain",
+    "a cat": "a cat",
+    "a tree": "a tree",
+    "a forest": "a forest"
 }
+
 
 text_classes = []
 for c in classes_text.values():
